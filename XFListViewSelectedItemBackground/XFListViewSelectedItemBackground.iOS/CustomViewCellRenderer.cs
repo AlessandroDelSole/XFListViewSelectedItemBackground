@@ -16,7 +16,6 @@ namespace XFListViewSelectedItemBackground.iOS
         {
             var cell = base.GetCell(item, reusableCell, tv);
 
-            ////cell.SelectionStyle = UITableViewCellSelectionStyle.Blue;
             var selectedBackgroundView = new UIView(cell.SelectedBackgroundView.Bounds);
             selectedBackgroundView.Layer.BackgroundColor = Color.FromRgb(127, 210, 255).ToCGColor(); 
             cell.SelectedBackgroundView = selectedBackgroundView;
