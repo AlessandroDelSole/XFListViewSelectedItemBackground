@@ -12,6 +12,8 @@ namespace XFListViewSelectedItemBackground
 		public MainPage()
 		{
 			InitializeComponent();
+
+            this.BindingContext = new PhoneBook();
 		}
 	}
 }

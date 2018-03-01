@@ -4,8 +4,21 @@
              xmlns:local="clr-namespace:XFListViewSelectedItemBackground"
              x:Class="XFListViewSelectedItemBackground.MainPage">
 
-	<Label Text="Welcome to Xamarin.Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
 
+    <Grid>
+        <ListView ItemsSource="{Binding People}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <local:CustomViewCell>
+                        <local:CustomViewCell.View>
+                            <StackLayout Orientation="Vertical">
+                                <Label Text="{Binding Name}" />
+                                <Label Text="{Binding Age}" />
+                            </StackLayout>
+                        </local:CustomViewCell.View>
+                    </local:CustomViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
 </ContentPage>
